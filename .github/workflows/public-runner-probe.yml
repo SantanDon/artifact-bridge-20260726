@@ -1,0 +1,17 @@
+name: Public runner probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Host facts
+        run: |
+          echo runner-started
+          uname -a
+          uname -m
